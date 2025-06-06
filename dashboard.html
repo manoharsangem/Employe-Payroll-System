@@ -1,0 +1,44 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="dashboard">
+    <h2>Dashboard</h2>
+    
+    
+    <div class="dashboard-cards">
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="card-info">
+                <h3>Employees</h3>
+                <a href="{{ url_for('employees') }}" class="btn btn-secondary">Manage Employees</a>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">
+                <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <div class="card-info">
+                <h3>Payroll</h3>
+                <a href="{{ url_for('payroll') }}" class="btn btn-secondary">Process Payroll</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="dashboard-welcome">
+        <h3>Welcome to the Employee Payroll System</h3>
+        <p>This system helps you manage employee information and process payroll efficiently.</p>
+        <ul>
+            <li>Add and manage employee records</li>
+            <li>Generate monthly salary slips</li>
+            <li>Process employee payments</li>
+            <li>View payroll history</li>
+        </ul>
+    </div>
+</div>
+{% endblock %}
